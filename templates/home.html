@@ -1,0 +1,128 @@
+{% extends "layout.html" %} 
+{%block head%}
+    <title>MCMAO</title>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons&style=sharp">
+    <link rel="stylesheet" href="/static/home.css">
+    <script src="static/jquery.js"></script>
+    <script src="static/home.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="static/draw.js"></script>
+{%endblock%}
+
+{%block body%}
+    <header>
+	    <div class="logo"> 
+		    <h1 > MO </h1>
+		    <h2 > McMao </h2>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="" class="active">Dashboard</a></li>
+				<li><a href="/statement">Statements</a></li>
+				<li><a href="/goals">Goals</a></li>
+				<li><a href="/notes">Notes</a></li>
+				<li><a href="/profile">Profile</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<div id="content">
+		<div class="left-panel">
+			<div id="myChart">
+				
+			
+			</div>
+		
+
+	</div>
+
+	<div class="right-panel">
+			<form id="add-stat" > 
+		<input type="date" id="Date" name="Date" required >
+		
+		<input type="number" id="Amount" name="amount" step="0.01" placeholder="Amount" required >
+		
+		<input type="text" id="Description" name="Description" placeholder="Description" required >
+		
+		<h3 >Category:</h3>
+		 <select id="Category" name="Category" aria-placeholder="Category" required >
+		  <option></option>
+
+		  {% for option in category %}
+		  <option value="{{option}}">{{option}}</option>
+		  {% endfor %}
+
+		</select>
+		
+		<button type="submit" >Add</button>
+	  		</form>
+
+	<div class="transaction-history" >
+		<h2>Transaction History</h2>
+		<div class="scroll-container">
+			  <table>
+				<thead>
+				  <tr>
+					<th>Date</th>
+					<th>Transaction Type</th>
+					<th>Amount</th>
+				  </tr>
+				</thead>
+				<tbody>
+				</tbody>
+			  </table>
+		</div>
+	  </div>
+	</div>
+
+<!--
+	  <div id="new-chart-container" style="width: 400px; position: relative; bottom:800px; right: -200px;">
+		<canvas id="new-pie-chart" style=" position: absolute; top: -40px;"></canvas>
+	  </div>
+	  
+	  #comeent Include the Chart.js library
+	  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	  
+	  <script>
+	  // Define the data for the new chart
+	  var newData = {
+		labels: ["Rent", "Food", "Transportation", "Entertainment", "Other"],
+		datasets: [{
+		  data: [400, 200, 300, 100, 250],
+		  backgroundColor: [
+			"#FF6384",
+			"#36A2EB",
+			"#FFCE56",
+			"#4BC0C0",
+			"#E7E9ED"
+		  ]
+		}]
+	  };
+	  
+	  // Create the new pie chart
+	  var newCtx = document.getElementById("new-pie-chart").getContext("2d");
+	  var newPieChart = new Chart(newCtx, {
+		type: "pie",
+		data: newData,
+		options: {
+		  responsive: true,
+		  legend: {
+			position: "right"
+		  },
+		  title: {
+			display: true,
+			text: "New Monthly Expenses"
+		  }
+		}
+	  });
+	  
+	  // Set the new chart container's aspect ratio
+	  var newChartContainer = document.getElementById("new-chart-container");
+	  newChartContainer.style.maxWidth = "600px";
+	  newChartContainer.style.margin = "0 auto";
+	  newChartContainer.style.aspectRatio = "1";
+	  </script>
+-->
+
+
+{%endblock%}

@@ -1,0 +1,269 @@
+*{
+
+   list-style: none;
+   text-decoration: none;
+   font-family: "poppins";
+}
+
+body{
+   background: white;
+}
+
+
+
+header{
+   width: 80%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 40px; 
+   border-radius: 0 0 10px 10px;
+   margin: 0 auto; 
+   box-sizing: border-box;
+}
+
+
+nav ul{
+   display: flex;
+   margin-top: auto;
+}
+
+nav ul li a{
+   color: #212526;
+   display: block;
+   margin: 0 2px;
+   font-weight: inherit;
+   padding: 8px 18px;
+   transition: 0.2sec;
+   border-radius:30px  ;
+}
+
+nav ul li a:hover{
+   background: #f6f4ff;
+}
+
+nav ul li a.active{
+   background: #675cff;
+   color: #fff;
+}
+
+/*
+  @media only screen and (max-width: 1100px){
+   header{
+      width: 90%;
+      padding: 0 20px;
+   }
+   nav{
+      position: fixed;
+      right: -300px;
+      top: 0;
+      z-index: 1000;
+      width: 280px;
+      height: 100vh;
+      background-color: #fefefe;
+      transition: 0.2s; 
+      box-shadow: 2px 0 20px 0 rgba(0, 0, 0, 0.05);
+   }
+   #nav_check:checked ~ nav{
+    right: 0;
+   }
+   nav .logo{
+      display: block;
+      height: 70px ;
+      display: flex;
+      align-items: center;
+      margin-left: 30px;
+   }
+   nav ul li a{
+      margin-bottom: 5px;
+      padding: 10px 15px;
+      border-radius: 5px;
+   }
+   nav ul{
+      display: block;
+      padding: 0 20px;
+      margin-top: 30px; 
+   }
+
+}
+
+canvas{
+   background-color: white;
+   border-radius: 20px;
+   max-width: 700px;
+   max-height: 350px;
+   margin-left: 40px;
+   margin-top: 50px;
+   margin-right: 40px;
+   transition: 0.5ms;
+   border: 1px solid #ccc;
+}
+
+@media only screen and( max-width: 1100px) {
+  canvas{
+   margin: auto;
+  }
+} 
+*/
+
+ 
+ label {
+   margin-top: 10px;
+   margin-bottom: 5px;
+ }
+ 
+
+ 
+ button {
+   background-color: #675cff;
+   color: white;
+   border: none;
+   border-radius: 3px;
+   padding: 10px 20px;
+   cursor: pointer;
+ }
+ 
+ button:hover {
+   background-color: #3e8e41;
+ }
+ @media only screen and( max-width: 1000px) {
+   form{
+    margin: auto;
+   }
+ }
+ .transaction-history {
+   /*margin-left: 80px;
+   margin-right: 80px;
+   margin-bottom: 80px ;
+   width: 300px;
+   top: 550px;
+   left: 90px;;
+ */
+	margin-top: 35px;
+	border: 1px solid #ccc;
+	border-radius: 20px;
+	background-color: #fff;
+	padding: 20px;
+}
+ 
+ .transaction-history h2 {
+   margin-top: 0;
+   font-size: 24px;
+ }
+ 
+ .scroll-container {
+   max-height: 300px;
+   overflow-y: auto;
+ }
+ 
+ table {
+   border-collapse: collapse;
+   width: min-content;
+ }
+ 
+ th, td {
+   text-align: left;
+   padding: 10px;
+   border-bottom: 1px solid #ccc;
+ }
+ 
+ th {
+   background-color: #eee;
+ }
+ 
+ tr:last-child td {
+   border-bottom: none;
+ }
+ 
+ .recent-amount {
+   font-weight: solid;
+ }
+ 
+ @media screen and (max-width: 600px) {
+   th, td {
+     padding: 5px;
+   }
+   
+   th {
+     font-size: 16px;
+   }
+   
+   td {
+     font-size: 14px;
+   }
+ }
+
+
+/* my css */
+
+.logo
+{
+	display:flex;
+	flex: inline;
+	font-size: x-large;
+}
+.logo h1
+{
+	margin: 10px;
+	font-family: Bodoni Ornaments;
+}
+.logo h2
+{
+	margin: 10px;
+	font-family: silom;
+}
+#content
+{
+ display: flex;
+ justify-content:space-evenly;
+ margin: 32px 64px;
+}
+#content .left-panel
+{
+        margin:15px;
+}
+#content .right-panel
+{  
+        margin:15px;
+        padding: 15px;
+        border-radius: 25px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+#content .right-panel form
+{
+  display: flex;
+  flex-direction: column;
+  margin-right: 10% ;
+  align-items: center;
+}
+#content .right-panel form input,
+#content .right-panel form select
+{
+  width : 100%;
+  background-color:white;
+  margin-bottom: 10px;
+  border-radius: 3px;
+  border-bottom: 1px solid #ccc;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  height: 32px;
+  padding:5px;
+  font-size: 20px;
+  box-shadow: 2.5px 2.5px teal;
+}
+
+#add-stat
+{
+	width: fit-content;
+}
+
+#myChart
+{
+	width: 900px;
+	max-width: 1200px;
+	height: 450px;
+}
+
